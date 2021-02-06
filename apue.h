@@ -6,9 +6,17 @@
 #include <stdlib.h>
 
 #include <unistd.h>
+#include <string.h>
 
-int
+#define MAXLINE 100
+
+void
 err_sys(char *message){
     printf("%s\n", message);
     exit(127);
+}
+
+void
+err_ret(char *message, char* buf){
+    printf(message, buf);
 }
